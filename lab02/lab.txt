@@ -1,0 +1,22 @@
+2.1
+a. Both are able to solve the problem optimally
+b. Hill climbing works faster since it always makes the optimal move in this case, while annealing may not
+c. The starting value does not make a difference, as there is only one optimum
+d. A higher delta will cause the program to run faster, but be less precise
+e. I assume that this is to allow simulated annealing to run in parallel.
+
+2.2
+a. Simulated annealing does much better here, as it is able to find adjacent local optima, while hill-climbing can't
+b. Yes, the starting value determines which local optimum will be found for hill climbing, and annealing can only make it so far before the temperature gets too low to jump to another optimum
+c. Increasing the delta made both algorithms much less consistent, sometimes even going negative.
+d. The maximum value is around 30, although neither algorithm is really consistent, simulated annealing ususally does much better, but occasionally does worse.
+
+2.3
+a. Both algorithms are improved substantially, but annealing benefits much more, often find maxima beyond 40!
+b. Hill climbing appears to average a value of about 27, while simulated annealing is around 35.
+c. Simulated annealing does much better because it is usually able to "jump" over a few local optima, so by doing several runs of it, it increases the chances that it is able to jump really far
+
+2.4
+a. Hill climbing, as annealing already provides a way to find better local optima.
+b. How many solutions you can maintain really depends on the hardware you run it on, but most machines could probably handle a few hundred without breaking a sweat
+c. To implement it, you would start by breaking up the possible starting values into chunks, and trying a single value out of each chunk. Then choose whichever n chunks did the best, and break each of those chunks into sub-chunks and recursively check those. Set a maximum depth to stop when you have a sufficiently good answer.
