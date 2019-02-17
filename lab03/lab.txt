@@ -12,14 +12,14 @@ b
     Backtracking without forward checking/mrv is able to handle values of n up to about 25+, before it gets too long
     Min conflicts appears to be able to handle pretty much arbitrarily difficult problems; even at 2000+ it took only a few seconds to run.
 b
-    By adding in forward checking and mrv, backtracking search is able to run up to values of about 100 before showing any sign of slowdown, which is better than either setting on its own, and much better than the baseline
+    By adding in forward checking and mrv, backtracking search is able to run up to values of about 100 before showing any sign of slowdown, which is better than either setting on its own, and much better than the baseline. This is because it no longer has to check many parts of the search space that wont lead to a solution.
 c
-    It seems to take anywhere form 20-80 steps in most cases.
+    It seems to take anywhere form 20-80 steps in most cases, though the actual number varies greatly.
 
 3.3.a
     CSP requires a set of variables each of which can be assigned a value from its domain. There are then a set of constraints that limit which values of the domain are valid, and a functions to assign new values.
     Traditional Search and CSP both requires a State, a set of actions which can transform the a valid state into another valid state, a Result function to apply a given action and produce the new state, and a goal test, to see if the process has completed.
-    Thus, CSP feels much like an extension of a traditional search that can be done where there are specific constraints that can be applied to the variables.
+    Thus, CSP is like an extension of a traditional search that can be done where there are specific constraints that can be applied to the variables.
 b
     The heuristics used in both types of algorithms are designed to prioritize checking paths which are most likely to lead to a solution.
     The heuristics differ in that traditional search heuristics are often based on the "value" of a particular state, while CSP focuses on the number of constraints that are/aren't met.
