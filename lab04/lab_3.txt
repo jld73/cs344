@@ -1,0 +1,31 @@
+p(a|b) = p(b|a)*p(a) / p(b)
+
+a.
+P(User) = .089 T, .911 F
+P(test|user) = .99
+P(-test|user) = .01
+P(test|-user) = .02
+
+P(User|test):
+
+    P(test) = P(test ^ user) + P(test ^ -user) = P(test|user)*P(user) + P(test|-user) * P(-user)
+                                                 .99         *.089    + .02           * .911     = .10633
+
+    P(test|user) * P(user) / P(test)
+    .99          * .089    / .10633 = .829
+
+
+b.
+P(cancer) = .01
+P(-cancer = .99
+P(test|cancer) = .8
+P(-test|cancer = .2
+P(test|-cancer) = .096
+
+    P(test) = P(test ^ cancer) + P(test ^ -cancer) = P(test|cancer)*P(cancer) + P(test|-cancer) * P(-cancer)
+                                                     .8            *.01       + .096            * .99
+    P(test) = .10304
+P(cancer|test):
+    P(test|cancer) * P(cancer) / P(test)
+    .8             * .01       / .10304
+    P(cancer|test) = .0776
