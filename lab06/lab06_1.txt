@@ -1,0 +1,18 @@
+1. I'd like to consider a ML project to play tetris.
+2. The ideal outcome would be for the model to, given the current piece, upcoming pieces, and the current board, give the commands necessary to place the piece in an advantageous position.
+3.
+    Success metric: The score of the game at the end of the game, if the model is repeatedly applied.
+    Success means playing better than current tetris players, failure means playing below the same level as current tetris players.
+4. The output will be a list of commands to move the piece to the location. The training data could be obtained either from replay files, or by parsing recorded video of games being played.
+5. The output will be created every time a new piece is generated into the play area. A simple controller will parse the list of commands, and then play them.
+6. If not ML, I would perform a traditional search using score as the heuristic.
+7. Multidimensional regression to predict 15 moves (I believe the most complicted placements can be done in <15 moves)
+    A simpler problem could be a multiclass single label model to, given the current state and current position of the falling piece, decide the next button to press.
+8. The inputs, as stated, will be the current state of the board as a one-hot representation of whether each box is filled or not, plus an additional vector containing the current piece's shape and the upcoming pieces
+    The output is an ordered list of moves to make (buttons to press)
+9. The inputs would be obtained, as previsously stated, from replay files of professional players, or parsed from videos. Each column would require upfront work to parse the raw data into a one-hot representation, but once a system is in place, arbitrary amounts of data could be collected quickly from the vast archives on youtube/speeddemosarchive.
+10. I only listed 2 inputs, both of which would be relatively easy. You could also add in current score, current level, and lines cleared with similar levels of difficulty.
+
+
+
+This is just by me, Jordan.

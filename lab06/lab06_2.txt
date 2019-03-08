@@ -1,0 +1,20 @@
+
+
+
+                                   6Y - 6N
+                                    Hungry
+                                      |
+                       ------N-------------------Y------
+                       |                               |
+                    1Y - 4N                         5Y - 2N
+
+
+
+
+Entropy(WillWait) = - (.5 lg(.5) + .5 lg(.5)) = 1
+InfoGain(Hungry) = Entropy(WillWait) - Remainder(Hungry)
+Remainder(Hungry) = (1 + 4) / (6 + 6) * Entropy(No) + (5 + 2) / (6 + 6) * Entropy(Yes)
+Entropy(No) = - (.2 lg(.2) + .8 lg(.8)) = .722
+Entropy(Yes) = - (5/7 lg(5/7) + 2/7 lg(2/7)) = .863
+Remainder(Hungry) = (1 + 4) / (6 + 6) * .772 + (5 + 2) / (6 + 6) * .863 = .825
+InfoGain(Hungry) = 1 - .825 = .175
