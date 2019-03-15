@@ -1,0 +1,18 @@
+a. Categorical data that is textual, can take on any of a predetermined list of values, whereas numerical data is continuous.
+b.
+Task1
+train_model(
+    learning_rate=0.000015,
+    steps=500,
+    batch_size=5
+)
+
+Task2
+train_model(
+    learning_rate=0.000015,
+    steps=500,
+    batch_size=5,
+    input_feature='population'
+)
+
+c. The hyper-parameters tune how the network "learns" the data. There is no standard tuning method, as the effects of each parameter is heavily dependant on the data.

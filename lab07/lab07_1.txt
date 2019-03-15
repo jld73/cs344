@@ -1,0 +1,15 @@
+Exercise 1
+# Your code here
+san = cities['City name'].apply(lambda val: 'San' in val)
+area = cities['Area square miles'].apply(lambda val: val > 50)
+b = san & area
+cities['boolean'] = b
+print(cities)
+
+Exercise 2
+# Your code here
+print(cities)
+cities.reindex([3, 0, 1])
+print(cities)
+# This could be useful if certain lines of data are missing or incomplete
+

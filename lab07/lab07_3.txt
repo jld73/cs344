@@ -1,0 +1,27 @@
+Task1
+#
+# YOUR CODE HERE
+#
+
+california_housing_dataframe["rooms_per_person"] = california_housing_dataframe['total_rooms'] / california_housing_dataframe['population']
+
+print(california_housing_dataframe)
+
+calibration_data = train_model(
+    learning_rate=0.00005,
+    steps=500,
+    batch_size=5,
+    input_feature="rooms_per_person"
+)
+
+Task2
+# YOUR CODE HERE
+plt.scatter(calibration_data["predictions"], calibration_data["targets"])
+
+Task3
+# YOUR CODE HERE
+clipped_feature = california_housing_dataframe["rooms_per_person"].apply(lambda x: max(x, 4))
+
+b. Synthetic features allow us to draw connections between multiple inputs, which, depending on data, could give better results than trying each feature individually
+
+c. Outliers are values far beyond the normal distribution. Typically these are removed to avoid them unduly affecting the dataset as a whole.
