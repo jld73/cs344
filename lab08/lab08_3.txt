@@ -1,0 +1,5 @@
+a. Seaborn is an extension of MatPlotLib that adds new types of plots and makes the plots look better
+b. There are 397 rows of data, which seems like a rather small amount. It's probably sufficient to get decent results, but more would be ideal.
+c. Normalization will take the various data ranges and convert it to a standard range. For example, it might convert horsepower from a range of 46 to 255 down to a range from 0.0 to 1.0. so that all measures are being compared on the same scale
+d. No, the model is using relu, which is a non-linear activation function.
+e. Yes, smaller datasets have a much greater risk of overfitting, as it is much easier to "memorize" small datasets. Thus, you want a smaller network that has less chance of being capable of "memorizing" the data, so that it must learn the actual relationships in order to improve.

@@ -1,0 +1,57 @@
+8.1
+The PCC measures how much two different variables correlate. If it is close to 1, that means that an increase in one variable results in a proportional increase in the other very reliably. If it is about 0, that means that an increase in one has no bearing on the other value. If they are near -1, an increase in one will reliably result in a proportional decrease in the other.
+For example, total rooms has .9 PCC with total bedrooms, which makes sense because the proportion of each type of room is not likely to change too much as the number of rooms increases.
+
+#
+# Your code here: add your features of choice as a list of quoted strings.
+#
+minimal_features = [
+    "median_income",
+    'longitude'
+]
+
+# I also tried population but it failed miserably
+
+assert minimal_features, "You must select at least one feature!"
+
+minimal_training_examples = training_examples[minimal_features]
+minimal_validation_examples = validation_examples[minimal_features]
+
+#
+# Don't forget to adjust these parameters.
+#
+train_model(
+    learning_rate=0.001,
+    steps=500,
+    batch_size=5,
+    training_examples=minimal_training_examples,
+    training_targets=training_targets,
+    validation_examples=minimal_validation_examples,
+    validation_targets=validation_targets)
+
+
+#
+# YOUR CODE HERE: Train on a new data set that includes synthetic features based on latitude.
+#
+training_examples['dist_san'] = training_examples['latitude'] - 38
+validation_examples['dist_san'] = validation_examples['latitude'] - 38
+minimal_features = [
+  "median_income",
+  "dist_san",
+]
+
+minimal_training_examples = training_examples[minimal_features]
+minimal_validation_examples = validation_examples[minimal_features]
+
+_ = train_model(
+    learning_rate=0.01,
+    steps=500,
+    batch_size=5,
+    training_examples=minimal_training_examples,
+    training_targets=training_targets,
+    validation_examples=minimal_validation_examples,
+    validation_targets=validation_targets)
+
+### final RMS 131.5, no I did not beat the example
+### I used distance from san francisco as my synthetic feature
+
