@@ -1,0 +1,8 @@
+E1
+a. The Training data set has 1000 of each, and the test set has 500 of each
+b. The first network is almost the same structure (3 conv layers with maxpooling inbetween) as the one we did in class, but with more complicated input, and a much harder problem to solve. As a result it performs substantially worse.
+c. It's interesting how some representations of the cat basically just get downscaled as the size decreases, while others seem to be finding edges, or light spots, etc.
+
+E2.
+a. Data augmentation involves using existing data and randomly transforming them in ways that the result would still be a valid entry in the data set. This adds more valid data points to the data set, helping to reduce overfitting without requiring more raw data.
+b. I was able to get a val-acc of .77 by using the parameters listed in the solution. These models were taking upwards of 30 minutes to train so I did not have time to try it many times.

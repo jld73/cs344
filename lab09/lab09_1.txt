@@ -1,0 +1,5 @@
+a. It does not appear to work very well; the RMSE fluctuates considerably, and doesn't drop very much at all, meaning that the training likely isn't improving it at all.
+b. l2 loss is Mean Squared Error, which is a good error function for data sets without outliers.
+   LogLoss is a function that works well for probabilities, as it punishes confident wrong errors more than un-confident ones.
+c. Logistic Regression starts at a higher value than RMSE, but drops with reasonable regularity, meaning that it is definitely improving during the training
+d. I tried experimenting with several different values, including the ones listed in the solution, but all of them took an extremely long time to train, like 10 minutes to finish the first period, so I didn't run any of them to completion

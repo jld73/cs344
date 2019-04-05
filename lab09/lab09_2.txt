@@ -1,0 +1,3 @@
+a. Sparsity is a valuable feature to have in a network as it allows it to be optimized more effectively and to be computed more quickly. We regularize to help ensure that we get these benefits.
+b. l1 regularization helps by encouraging weights to be 0, which in turn causes the network to become more sparse.
+c. I was able to get 717 by changing regularization strength to .2
