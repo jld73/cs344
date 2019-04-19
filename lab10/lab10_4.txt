@@ -1,0 +1,49 @@
+a. If the behavior you hope to predict is simple, a linear model will be more efficient to train and evaluate, and may be able to achieve similar effectiveness. So, if speed is of the essense, and accuracy is not critical, a linear model may be a better choice.
+b. It does slightly better, but not by much.
+c. No, the performance drops back to the levels of the linear classifier
+d. Boring and disappointment both have similar embeddings, which makes sense as a boring movie is generally disappointing.
+e. My best was with:
+my_optimizer = tf.train.AdagradOptimizer(learning_rate=0.25)
+my_optimizer = tf.contrib.estimator.clip_gradients_by_norm(my_optimizer, 5.0)
+
+classifier = tf.estimator.DNNClassifier(
+  feature_columns=feature_columns,
+  hidden_units=[10,10],
+  optimizer=my_optimizer
+)
+
+classifier.train(
+  input_fn=lambda: _input_fn([train_path]),
+  steps=2000)
+
+evaluation_metrics = classifier.evaluate(
+  input_fn=lambda: _input_fn([train_path]),
+  steps=2000)
+
+
+Training set metrics:
+loss 6.8841615
+accuracy_baseline 0.5
+global_step 2000
+recall 0.94424
+auc 0.96055806
+prediction/mean 0.5585791
+precision 0.84864825
+label/mean 0.5
+average_loss 0.27536646
+auc_precision_recall 0.9599103
+accuracy 0.88792
+---
+Test set metrics:
+loss 8.576317
+accuracy_baseline 0.5
+global_step 2000
+recall 0.92032
+auc 0.93625647
+prediction/mean 0.56023246
+precision 0.813061
+label/mean 0.5
+average_loss 0.34305266
+auc_precision_recall 0.9330668
+accuracy 0.85436
+---

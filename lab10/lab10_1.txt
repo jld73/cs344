@@ -1,0 +1,15 @@
+a. Keras, as it has higher level, more abstracted tools that should make things easier than doing it with just tensorflow.
+b. dnn_regressor = train_nn_regression_model(
+    learning_rate=0.002,
+    steps=2500,
+    batch_size=50,
+    hidden_units=[10, 2],
+    training_examples=training_examples,
+    training_targets=training_targets,
+    validation_examples=validation_examples,
+    validation_targets=validation_targets)
+
+Final RMSE (on training data):   104.25
+Final RMSE (on validation data): 104.61
+
+Final RMSE (on test data): 102.99

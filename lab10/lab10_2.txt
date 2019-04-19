@@ -1,0 +1,14 @@
+a. Adagrad adjusts the learning rate as the model is trained, giving better effectiveness for convex problems.
+b. The best one was using adagrad with linear normalization:
+_ = train_nn_regression_model(
+    my_optimizer=tf.train.AdagradOptimizer(learning_rate=0.3),
+    steps=1000,
+    batch_size=100,
+    hidden_units=[10, 10],
+    training_examples=normalized_training_examples,
+    training_targets=training_targets,
+    validation_examples=normalized_validation_examples,
+    validation_targets=validation_targets)
+
+Final RMSE (on training data):   69.13
+Final RMSE (on validation data): 68.57
