@@ -1,0 +1,27 @@
+<div class="notebook">
+
+<div class="nb-cell program" name="p1">
+
+</div>
+
+<div class="nb-cell query" name="q1">
+bread  =  bread 
+</div>
+
+<div class="nb-cell query" name="q2">
+"Bread" = bread 
+</div>
+
+<div class="nb-cell query" name="q3">
+food(X)  =  food(bread) 
+</div>
+
+<div class="nb-cell query" name="q4">
+food(bread,X)  =  food(Y,sausage) 
+</div>
+
+<div class="nb-cell query" name="q5">
+meal(food(bread),X)  =  meal(X,drink(beer)) 
+</div>
+
+</div>

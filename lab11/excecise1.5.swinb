@@ -1,0 +1,39 @@
+<div class="notebook">
+
+<div class="nb-cell program" data-background="true" name="p1">
+wizard(ron).
+wizard(X):-  hasBroom(X),  hasWand(X).
+hasWand(harry).
+quidditchPlayer(harry).
+hasBroom(X):-  quidditchPlayer(X).
+</div>
+
+<div class="nb-cell query" name="q1">
+wizard(ron). 
+</div>
+
+<div class="nb-cell query" name="q2">
+witch(ron). 
+</div>
+
+<div class="nb-cell query" name="q3">
+wizard(hermione). 
+</div>
+
+<div class="nb-cell query" name="q4">
+witch(hermione). 
+</div>
+
+<div class="nb-cell query" name="q5">
+wizard(harry). 
+</div>
+
+<div class="nb-cell query" name="q6">
+wizard(Y). 
+</div>
+
+<div class="nb-cell query" name="q7">
+witch(Y). 
+</div>
+
+</div>

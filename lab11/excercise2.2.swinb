@@ -1,0 +1,32 @@
+<div class="notebook">
+
+<div class="nb-cell program" data-background="true" name="p1">
+house_elf(dobby).
+witch(hermione).
+witch("McGonagall").
+witch(rita_skeeter).
+magic(X):-  house_elf(X).
+magic(X):-  witch(X). 
+</div>
+
+<div class="nb-cell query" name="q1">
+magic(house_elf). 
+</div>
+
+<div class="nb-cell query" name="q2">
+wizard(harry). 
+</div>
+
+<div class="nb-cell query" name="q3">
+magic(wizard). 
+</div>
+
+<div class="nb-cell query" name="q4">
+magic("McGonagall"). 
+</div>
+
+<div class="nb-cell query" name="q5">
+magic(Hermione). 
+</div>
+
+</div>

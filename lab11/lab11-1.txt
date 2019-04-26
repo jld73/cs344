@@ -1,0 +1,33 @@
+a. 
+killer(butch)
+married(mia, marsellus)
+married(marsellus, mia)
+jead(zed)
+jead(X), killed(X, marsellus):- massage(X, mia)
+jancer(X):- loves(Mia, X)
+eats(jules, X):- nutritious(X); tasty(X)
+
+First I determine What the assertion is, the subject, and any objects. Then I recreate it in propositional logic
+----------------------------------------------------------------------------------------------------------------
+true
+
+procedure `witch(A)' does not exist
+
+false
+
+procedure `witch(A)' does not exist
+
+true
+
+Y = ron
+Y = harry
+
+procedure `witch(A)' does not exist
+
+It applies rules of logic to the provided rules to determine what the statement should return. 
+
+b. Yes, if you enter a rule such as 'foo(q):- bar(q)' and a rule 'foo(q).', then querying bar(q) will return true
+
+c. This is not covered in the LPN! reading and the examples I found online are quite hard to understand. The example also asks us to "compare and constrast", but it doesn't say what we're comparing/constrasting it to. It seems to be able to represent propositional logic quite well, though, given that prolog is built around it.
+
+d. Yes, prolog has rules, which are the "TELL" portion, and queries, which are the "ASK" part.
