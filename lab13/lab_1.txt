@@ -1,0 +1,3 @@
+https://swish.swi-prolog.org/p/CS%20344%20lab%2013.swinb
+
+or upload lab_1.swinb to swish

@@ -1,0 +1,38 @@
+<div class="notebook">
+
+<div class="nb-cell program" name="p1">
+in(X,Y):- directlyIn(X,Y).
+in(X,Y):- directlyIn(X,Z), in(Z,Y).
+directlyIn(olga,katarina).
+directlyIn(natasha,olga).
+directlyIn(irina,natasha). 
+</div>
+
+<div class="nb-cell query" name="q1">
+in(olga, katarina)
+</div>
+
+<div class="nb-cell markdown" name="md1">
+
+</div>
+
+<div class="nb-cell program" name="p2">
+tran(eins,one).
+tran(zwei,two).
+tran(drei,three).
+tran(vier,four).
+tran(fuenf,five).
+tran(sechs,six).
+tran(sieben,seven).
+tran(acht,eight).
+tran(neun,nine). 
+
+translate([],[]).
+translate([H1|T1],[H|T]):- tran(H1, H), translate(T1,T).
+</div>
+
+<div class="nb-cell query" name="q2">
+translate([eins, fuenf, sechs], X)
+</div>
+
+</div>

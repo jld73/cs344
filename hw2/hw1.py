@@ -65,7 +65,7 @@ def analyze(message):
 
 m1 = ['i', 'would', 'like', 'some', 'eggs', 'not', 'ham']
 m2 = ['i', 'am', 'not', 'spam']
-m3 = ['i', 'like', 'ham']
+m3 = ['i']
 
 print("Both", analyze(m1))
 print("Spam", analyze(m2))
