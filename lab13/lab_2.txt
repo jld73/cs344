@@ -10,11 +10,12 @@ on(c,table)                     -> elim 3,4
 above(c,table)                  -> elim 9,5
 above(a,b)                      -> elim 1,5
 above(b,c)                      -> elim 2,5
-above(b,c), above(c,table)      , intro 12,10
+above(b,c), above(c,table)       , intro 12,10
 above(b,table)                  -> elim 13,6
-above(a,b), above(b,table)      , intro 11,14
+above(a,b), above(b,table)       , intro 11,14
 above(a,table)                  -> elim 15,6
 
+I can't figure out how Resolution can possibly unify everything, since there are 4 "on" predicates but only one of them is negated. I've included a fitch proof to show that I know how to solve the problem, but the method you gave us in class for resolution doesn't work (1 rewrite P->Q with -PvQ, write CNF of all facts, 2 assume negation of what we want to prove, 3 unify statments with their negation assigning variables as necessary, 4 eliminate everything) 
 
 Resolution:
                 -above(a,table) on(a,b) on(b,c) supports(table,c) -supports(X,Y); on(Y,X) -above(P,Q); -above(Q,R); above(P,R) -on(S,T); above(S,T)
