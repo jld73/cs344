@@ -63,10 +63,13 @@ def analyze(message):
     return prod / (prod + inv_prod)
 
 
-m1 = ['i', 'would', 'like', 'some', 'eggs', 'not', 'ham']
-m2 = ['i', 'am', 'not', 'spam']
-m3 = ['i']
+m1 = ['and']
+m2 = ['do']
+m3 = ['spam']
+m4 = ['ham']
 
-print("Both", analyze(m1))
-print("Spam", analyze(m2))
-print("Ham", analyze(m3))
+
+print("and", analyze(m1))
+print("do", analyze(m2))
+print("spam", analyze(m3))
+print("ham", analyze(m4))
